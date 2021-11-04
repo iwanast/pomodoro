@@ -1,0 +1,208 @@
+@import "variables.scss";
+
+//Dropdown-button
+.dropbtn {
+  top: 0;
+  position: fixed; 
+  left: calc(100% - 100px); 
+  z-index: 2;
+  margin: 4rem 4rem 0 0;
+  cursor: pointer;
+    width: 2vw;
+    height: 2vw;
+    overflow: visible;
+    border: none;
+    border-radius: 50%; 
+    padding: 0; 
+    background: radial-gradient(rgba(219, 223, 226), rgba(219, 223, 226, 0));
+    transform: scale(1);
+    transition: transform .6s linear;
+
+    @media screen and (max-width: 1850px) {
+      left: calc(100% - 80px);
+    }
+    @media screen and (max-width: 1280px) {
+      width: 2.5rem;
+      height: 2.5rem;
+      left: calc(100% - 70px);
+    }
+    @media screen and (max-width: 1080px) {
+      left: calc(100% - 60px);
+      margin-top: 3rem;
+    }
+    @media screen and (max-width: 880px) {
+      left: calc(100% - 50px);
+    }
+    @media screen and (max-width: 481px) {
+      margin: 2rem 2rem 0 0;
+    }
+}
+.dropbtn:hover{
+    transform: scale(-1.5, 1.5);
+   fill:rgb(255, 255, 255);
+}
+
+.bigger{
+  transform: scale(-1.5, 1.5);
+  background: radial-gradient(rgb(52, 138, 167), rgba(219, 223, 226, 0));
+}
+
+//svg inside my button
+.bi-bi-gear {
+  // Fixes my Java-script toggle :-)
+  pointer-events:none;
+  position: absolute; 
+  top: 50%;
+  transform: translate(-50%, -50%) ;
+  left:50%;  
+  margin: 0;
+  padding: 0; 
+  width: 2vw;
+  height: inherit;
+  
+  @media screen and (max-width: 1280px) {
+    width: 2.5rem;
+    height: inherit;
+  }
+}
+
+.dropdown-content {
+  position: fixed;
+  margin-top: 20px;
+  left: calc(100% - 414.5px);
+  z-index: 2;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.3s 0.3s linear, transform 0.3s 0.3s ease-in-out;
+  background-color: $main-color-font; 
+  color: $main-color-background;
+  top: 100px;
+  transform: translateX(100%);
+  box-shadow: $hover-color-main; // 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+  @media screen and (max-width: 1800px){
+    top: 90px;
+  }
+  @media screen and (max-width: 1400px){
+    top: 80px;
+  }
+  @media screen and (max-width: 1201px){
+    top: 70px;
+  }
+  @media screen and (max-width: 1025px) {
+    left: calc(100% - 414px);
+    top: 60px;
+  }
+  @media screen and (max-width: 769px){
+    left: calc(100% - 386.5px);
+  }
+  @media screen and (max-width: 481px){
+    left: calc(100% - 273.5px);
+    top: 50px;
+  }
+  button{
+    position: absolute;
+    top: 0; 
+    right: 0;
+    margin: 12px;
+    border: none;
+    font-weight: 700;
+
+  }
+  ul{
+    list-style: none;
+    text-decoration: none;
+    padding: 30px; 
+    padding-right: 35px;
+    margin: 10px 0 0 0;
+
+    box-sizing: border-box;
+    color: black;
+    display: block;
+
+    @media screen and (max-width: 481px){
+      margin-top: 40px;
+      padding: 10px; 
+    }
+    ul{
+      padding: 0; 
+      padding-left: 18px;
+      margin: 0; 
+    }
+
+    li {
+      font-size: 2.2rem; // 2.8
+      padding: 6px;
+      transform: scale(1);
+      transition: transform .4s ease; 
+
+      @media screen and (max-width: 769px){
+        font-size: 2rem;
+      }
+      @media screen and (max-width: 481px){
+        font-size: 1.5rem;
+      }
+    }
+  
+  li:hover {
+    background-color: rgb(204, 204, 204); 
+    transform: scale(1.1);
+    @media screen and (max-width: 481px){
+      transform: scale(1.05);
+    }
+  }
+      
+    .input-required {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0 1px;
+    }
+      
+    .title-settings {
+      font-weight: 600;
+    }
+       
+    select {
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    .input {
+      //font-size: 16px;
+      margin-top: 1em;
+      margin-bottom: 1.5em;
+      padding: 0.75em 0.5em;
+      min-width: 200px;
+      border: none;
+      border-left: 7px solid black;
+      transition: border-left-color 160ms;
+      background-color: white;
+      width: 100%;
+      font-size: 2.2rem; 
+
+      @media screen and (max-width: 769px){
+        font-size: 2rem;
+      }
+      @media screen and (max-width: 481px){
+        font-size: 1.5rem;
+      }
+    } 
+
+  }
+  /*.select{
+    font-size: 2.2rem; 
+
+      @media screen and (max-width: 769px){
+        font-size: 2rem;
+      }
+      @media screen and (max-width: 481px){
+        font-size: 1.5rem;
+      }
+  }*/
+}
+//for the toggle to show the content
+.show {
+  opacity: 1;
+  transform: translate(0);  
+}

@@ -1,0 +1,162 @@
+[ 
+    {
+    "id": "Big",
+    "theme": [
+            {   "name": "animals",
+                "adresses": [
+                "Animals_Togheter_bright.jpg",
+                "Animals2_Togheter1_dark.jpg",
+                "Animals6_dark.jpg",
+                "Animals7_bright.jpg",
+                "GroupofFancykoigalaxybettafishes..jpg",
+								"Animals3_Togheter2_bright.jpg"
+                ]
+            },
+            {   "name": "fantasy",
+                "adresses": [
+                "Conceptofanopenmagicbook.jpg",
+                "Fantasy1_dark.jpg",
+                "Fantasy2_bright.jpg",
+                "Fantasyimageofamagicalmushroomisland.jpg",
+                "Villedufutur.jpg",
+								"Fantasy_dark.jpg"
+                ]
+            },
+            {   "name": "funny",
+                "adresses": [
+                "Elephantontree.jpg",
+                "SmallBraveGoldfishWithSharkFin.jpg"
+                ]
+            },
+            {   "name": "lovecraft",
+                "adresses": [
+                "Cthulhu_dark.jpg",
+                "CthulhuthegreatoldoneofH.P.Lovecraft.jpg"
+                ]
+            },
+            {   "name": "seasons",
+                "adresses": [
+                "Beautifulautumnseasonleaves.jpg",
+                "aerialviewofgreenfieldsgreenriceandcornfieldsinBaliIndonesia.jpg",
+                "Seasons_bright.jpg",
+                "Seasons1_bright.jpg"
+                ]
+            },
+            {   "name": "togheter",
+                "adresses": [
+                "Together3_bright.jpg",
+                "Togheter4_bright.jpg",
+                "Togheter5_dark.jpg",
+                "Togheter6_bright.jpg"
+                ]
+            }       
+        ]
+    },
+    {
+        "id": "Medium",
+        "theme": [
+                {   "name": "animals",
+                    "adresses": [
+                    "Animals_Togheter_bright.jpg",
+                    "Animals2_Togheter1_dark.jpg",
+                    "Animals6_dark.jpg",
+                    "Animals7_bright.jpg",
+                    "GroupofFancykoigalaxybettafishes..jpg",
+										"Animals3_Togheter2_bright.jpg"
+                    ]
+                },
+                {   "name": "fantasy",
+                    "adresses": [
+                    "Conceptofanopenmagicbook.jpg",
+                    "Fantasy1_dark.jpg",
+                    "Fantasy2_bright.jpg",
+                    "Fantasyimageofamagicalmushroomisland.jpg",
+                    "Villedufutur.jpg",
+										"Fantasy_dark.jpg"
+                    ]
+                },
+                {   "name": "funny",
+                    "adresses": [
+                    "Elephantontree.jpg",
+                    "SmallBraveGoldfishWithSharkFin.jpg"
+                    ]
+                },
+                {   "name": "lovecraft",
+                    "adresses": [
+                    "Cthulhu_dark.jpg",
+                    "CthulhuthegreatoldoneofH.P.Lovecraft.jpg"
+                    ]
+                },
+                {   "name": "seasons",
+                    "adresses": [
+                    "Beautifulautumnseasonleaves.jpg",
+                    "aerialviewofgreenfieldsgreenriceandcornfieldsinBaliIndonesia.jpg",
+                    "Seasons_bright.jpg",
+                    "Seasons1_bright.jpg"
+                    ]
+                },
+                {   "name": "togheter",
+                    "adresses": [
+                    "Together3_bright.jpg",
+                    "Togheter4_bright.jpg",
+                    "Togheter5_dark.jpg",
+                    "Togheter6_bright.jpg"
+                    ]
+                }       
+            ]
+    },
+    {
+            "id": "Small",
+            "theme": [
+                    {   "name": "animals",
+                        "adresses": [
+                        "Animals_Togheter_bright.jpg",
+                        "Animals2_Togheter1_dark.jpg",
+                        "Animals6_dark.jpg",
+                        "Animals7_bright.jpg",
+                        "GroupofFancykoigalaxybettafishes..jpg",
+												"Animals3_Togheter2_bright.jpg"
+                        ]
+                    },
+                    {   "name": "fantasy",
+                        "adresses": [
+                        "Conceptofanopenmagicbook.jpg",
+                        "Fantasy1_dark.jpg",
+                        "Fantasy2_bright.jpg",
+                        "Fantasyimageofamagicalmushroomisland.jpg",
+                        "Villedufutur.jpg",
+												"Fantasy_dark.jpg"
+                        ]
+                    },
+                    {   "name": "funny",
+                        "adresses": [
+                        "Elephantontree.jpg",
+                        "SmallBraveGoldfishWithSharkFin.jpg"
+                        ]
+                    },
+                    {   "name": "lovecraft",
+                        "adresses": [
+                        "Cthulhu_dark.jpg",
+                        "CthulhuthegreatoldoneofH.P.Lovecraft.jpg"
+                        ]
+                    },
+                    {   "name": "seasons",
+                        "adresses": [
+                        "Beautifulautumnseasonleaves.jpg",
+                        "aerialviewofgreenfieldsgreenriceandcornfieldsinBaliIndonesia.jpg",
+                        "Seasons_bright.jpg",
+                        "Seasons1_bright.jpg"
+                        ]
+                    },
+                    {   "name": "togheter",
+                        "adresses": [
+                        "Together3_bright.jpg",
+                        "Togheter4_bright.jpg",
+                        "Togheter5_dark.jpg",
+                        "Togheter6_bright.jpg"
+                        ]
+                    }       
+                ]
+    }
+  
+]

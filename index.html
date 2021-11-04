@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="With this fantastic pomodoro you can set your own background-theme and choose your time-settings for focus- and break-time.">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Focus-time and break-time timer - POMoDORo</title>
+  <link rel="shortcut icon" href="./images/pom-dor.ico" type="image/x-icon">
+  <script src="./scripts/script.js" defer></script>
+ </head>
+ <body>
+   <!--______________________NAVIGATION____________________________________-->
+        <button id="dropbtn" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg"  class="bi-bi-gear" viewBox="0 0 16 16">
+            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+          </svg></button>
+    
+        <div id="myDropdown" class="dropdown-content">
+          <button id="cross-button">X</button> 
+            <ul class="dropdown-list">
+                <li><i class="bi bi-clock"><i class="bi bi-clock-fill"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                </svg></i></i> <span class="title-settings">Time setting</span> 
+                    <ul>
+                        <li>
+                            <p>Short pomodoro:
+                            <input type="number" placeholder="25" id="short-minutes" name="quantity" min="1" max="60">
+                            minutes</p>
+                        </li>
+                        <li>
+                            <p>Long pomodoro:
+                            <input type="number" placeholder="45" id="long-minutes" name="quantity" min="1" max="180">
+                            minutes</p>
+                        </li>
+                    </ul>
+                </li>
+                <li><i class="bi bi-gear"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16">
+                    <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                    <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/>
+                    </svg></i> <span class="title-settings">Theme</span>  
+                    <select id="theme-dropdown" name="themes"></select>
+                </li>
+                <!--<li><i class="bi bi-journal-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
+                    <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                   </svg></i> <span class="title-settings">Log</span>
+                </li>-->
+            </ul>
+        </div>
+
+<div id="wrapper-whole-page">
+<!--______________________POMODORO-FIRST-SIDE____________________________________href="#outer-wrapper-sign-in"-->
+   <div class="outer-wrapper">
+     <header class="inner-wrapper" id="header">
+        <h1 > <a id="link-to-sign-in" ><span>POM</span>O<span>DOR</span>O</a></h1>
+        <h2>Your focus- and break-time-keeper</h2>
+     </header>
+    </div>
+<!--______________________SIGN_IN____________________________________-->
+     <div class="outer-wrapper" id="outer-wrapper-sign-in" >
+     <div id="wrapper-sign-in" class="inner-wrapper">
+       <!--method="POST" is to use when really sending data-->
+      <form id="sign-in" >
+        <label for="username">
+         <span>username</span>
+          <input type="text" id="username" name="username" placeholder="username" required>
+        </label>
+        <label for="password">
+         <span>password</span> 
+          <input type="password" id="password" placeholder="password" name="password" required>
+        </label>
+        <div id="submit">
+        <input id="submitLogIn" type="submit" value="submit">
+      </div>
+      </form>
+     </div>
+    </div>
+<!--______________________START TIMER____________________________________-->
+    <div class="outer-wrapper backgroundImage" id="outer-wrapper-start-pomodoro">
+     <div id="wrapper-start-pomodoro" class="inner-wrapper">
+            <button class="start-pomodoro-button" id="start-timer-short"><a id="link-start-short-pomodoro" href="#outer-wrapper-timer">Start short pomodoro</a></button>
+            <button class="start-pomodoro-button" id="start-timer-long"><a id="link-start-long-pomodoro" href="#outer-wrapper-timer">Start long pomodoro</a></button>
+     </div>
+    </div>
+<!--______________________ABOUT US____________________________________-->
+    <div class="outer-wrapper" id="outer-wrapper-about-us">
+     <div id="wrapper-about-us" class="inner-wrapper">
+      <h2>About POMoDORo</h2>
+      <p>POMoDORo let you decide on your own how long your focus-time should be to still feel well in the end of the day.
+          Normaly a pomodoro is 25 minutes (created first by Francesco Cirillo) but we feel it should be up 
+          up to you what feels best in the end of the day. So try out different focus-times
+          and settle for what feels good for you. (Settings are in the upper right corner if you did not try them yet.)</p>
+          <p>We recommend not more than two long-focus-pomodoro a day and the rest short ones.
+          but even here, it is your feeling deciding what is best for you and your recreation.</p>
+          <p>And you can personalize more still by choosing between a lot of different themes.</p>
+     </div>
+    </div>
+<!--______________________TIMER____________________________________-->
+    <div class="outer-wrapper backgroundImage" id="outer-wrapper-timer">
+     <div id="wrapper-started-pomodoro" class="inner-wrapper">
+
+      <audio id="auditivSignal">
+        <source src="./sound/339277__staticpony1__ethereal-orchestra.mp3" type="audio/mpeg">
+        <source src="./sound/339277__staticpony1__ethereal-orchestra.wav" type="audio/wav">
+        <source src="./sound/350211__growingup__fawn-guitar.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    
+        <p id="time"></p>
+     </div>
+    </div>
+<!--______________________CONTACT US____________________________________-->
+    <div class="outer-wrapper" id="outer-wrapper-contact-us">
+     <div id="wrapper-contact-us" class="inner-wrapper">
+      <h2>Contact us</h2>
+      <div id="contact-info-email-name">
+        <sidebar id="sidebar">
+          <h3>You matter to us</h3>
+          <p>We are happy to hear from you if you have suggestions, questions, praise or only want to say hello.</p>
+        </sidebar>
+        <!--Att the moment dummy-side and you go again to start-pomodoro. The Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)
+        POST has no size limitations, and can be used to send large amounts of data.
+        Form submissions with POST cannot be bookmarked -->
+        <form id="contact-form-userinfo" action="#outer-wrapper-start-pomodoro">  
+          <label for="name">
+            <span>name</span>
+            <input id="name" type="text" name="name" placeholder="name" required>
+          </label>
+          <label for="email">
+            <span>e-mail</span>
+            <input type="email" id="email" name="email" placeholder="email" required>
+          </label>
+      </div>
+      <div id="contact-form-text-submit">
+        <div id="message-wrapper">
+          <label for="message">
+            <span>message</span>
+            <textarea name="message" id="message" rows="7" cols="10" placeholder="Your message to us :-)" required></textarea>
+         </label>
+        </div>
+        <div id="wrapper-submit-contact">
+        <input type="submit" value="Submit">
+      </div>
+      </div>
+    </form>
+     </div>
+    </div>
+  </div>
+  <!--______________________FOOTER____________________________________-->
+  <footer>
+    <ul id="footer-list">
+      <li><a href="#outer-wrapper-contact-us">Contact</a></li>
+      <li><a href="#outer-wrapper-about-us">About</a></li>
+      <li id="footerLinkSignIn"><a href="#outer-wrapper-sign-in">Sign-in</a></li>
+      <!--<li><a href="#">Support</a></li>-->
+    </ul>
+  </footer>
+ </body>
+</html>

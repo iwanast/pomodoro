@@ -1,0 +1,570 @@
+@import "variables.scss";
+@import "navigation.scss";
+
+
+$main-color-background: rgb(13, 19, 33);
+$main-color-font: rgb(221, 221, 221);
+$footer-color:  rgb(245, 181, 83); // rgb(66, 63, 62);;
+$hover-color-main: rgb(245, 181, 83);
+$hover-color: rgb(52, 138, 167);
+
+/* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+html,
+body {
+    margin: 0; 
+}
+  
+body {
+    font-family: Papyrus, Garamond, serif;
+    background-color: $main-color-background;
+    color: $main-color-font;
+}
+
+#wrapper-whole-page{
+    position: relative; 
+}
+
+.outer-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative; 
+}
+
+.inner-wrapper {
+    position: absolute;
+    top: 50vh;
+    right: 50vw;
+    transform: translate(50%, -50%);
+    margin: auto; 
+    border: 3px solid rgb(52, 138, 167);
+
+    @media screen and (max-width: 481px) {
+      position: relative;
+      top: 20px;
+      right: 0;
+      transform: translate(0, 0);
+      margin: auto;
+      flex-shrink: 1;
+    }
+  
+    h2 {
+      text-align: center;
+      font-size: 2.5vw;
+  
+      @media screen and (max-width: 1024px) {
+        font-size: 3rem;
+      }
+      @media screen and (max-width: 481px) {
+        margin-top: 20px;
+      }
+    }
+  
+    p { font-size: 1.5vw;
+      text-align: justify;
+      padding: 10px 10px 20px; 
+      font-size: 1.5vw;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 1.5rem;
+      }
+      @media screen and (max-width: 481px) {
+        margin: 20px 10px 10px 10px;
+      }
+    }
+  
+    input,
+    button {
+      padding: 0.8vw;
+      display: block;
+      margin-bottom: 1.5vw;
+      font-size: 3vw;
+      //border-color: white;
+      color: $main-color-background; 
+  
+      @media screen and (max-width: 1024px) {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      @media screen and (max-width: 481px) {
+        position: relative;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
+    }
+    label{
+        color:$footer-color;
+    }
+}
+
+/////////////////////////BackgroundImage///////////////////////////////  
+.backgroundImage {
+    background-image: url("../images/Big/togheter/Togheter6_bright.jpg");
+    margin: 0;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+//////////////////////////////////////HEADER/////////////////////////////////////////
+#header{
+    @media screen and (max-width: 481px){
+        margin-top: 60px;
+    }
+}
+h1 {
+    font-size: 5vw;
+    text-align: center;
+    padding: 10px;
+  
+    @media screen and (max-width: 481px) {
+      font-size: 6.5vw;
+    }
+
+    a {
+      text-decoration: none;
+      color: $main-color-font;
+      transition: font-size 0.7s ease 0s;
+    }
+    span {
+      transition: color 0.8s ease, text-shadow 0.2s ease 0s;
+      font-size: 2em;
+    }
+  
+    a:hover {
+      font-size: 1.1em;
+      text-decoration: none;
+     
+      span {
+        color: $hover-color-main;
+        text-shadow: 2px 2px 2px $main-color-font;
+      }
+    }
+}
+
+/////////////////SIGN-IN////////////////////////////////
+  
+#sign-in{
+    display: flex;
+    flex-direction: column;
+    
+    label,
+    input {
+      display: inline-block;
+      margin: auto;
+      //height: auto;
+      font-size: 1.5vw;
+      z-index: 2;
+      position: relative;
+
+      @media screen and (max-width: 1024px) {
+        //height: auto;
+        font-size: 16px;
+      }
+    }    
+
+    label span {
+      margin: 1.5vw;
+      height: auto;
+      font-size: 1.5vw;
+      display: block;
+      position: relative;
+      transform: translateY(2.3em);
+      transition: transform 0.4s ease-in;
+      z-index: -1;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 16px;
+      }
+    }
+    label:focus-within span {
+      transition: transform 0.4s ease-out;
+      transform: translateY(0em);
+    }
+    #submit{
+        margin: auto;
+        margin-top: 50px; 
+
+        @media screen and (max-width: 481px) {
+            margin: 30px auto;
+          }
+    }
+}
+
+.disappear{
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+////////////////////////////CONTACT US SIDE///////////////////////
+#outer-wrapper-contact-us {
+    margin: 100px 0 120px;
+    display: flex; 
+    //height: max-content;
+    @media screen and (max-width: 481px) {
+       height: max-content;
+  }
+}
+#wrapper-contact-us{
+    //margin-top: 100px;
+
+    @media screen and (max-width: 481px) {
+        margin-bottom: 70px;
+   }
+
+    @media screen and (max-width: 481px) {
+        margin-bottom: 70px;
+   }
+}
+
+//__________________________________sidebar plus name and email
+#contact-info-email-name {
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-left: 2vw;
+    flex-wrap: wrap;
+  
+    #sidebar {
+      clear: both;
+      width: 35vw;
+      padding: 0 2vw;
+
+      @media screen and (max-width: 481px) {
+        width: 200px;
+      }
+  
+      h3 {
+        font-size: 2vw;
+        margin-top: 0;
+  
+        @media screen and (max-width: 1024px) {
+          font-size: 2rem;
+        }
+        @media screen and (max-width: 414px) {
+            text-align: center;
+          }
+      }
+      p {
+        margin: 0; 
+        padding-bottom: 0; 
+      }
+    }
+    //-------------------------------------------------form name email
+    #contact-form-userinfo {
+      width: 35vw;
+      padding: 0 2vw;
+  
+      @media screen and (max-width: 481px) {
+        width: 200px;
+        padding: 10px;
+      }
+  
+      label,
+      input {
+        display: block;
+        margin: 1.5vw;
+        height: auto;
+        font-size: 1.5vw;
+        z-index: 2;
+        position: relative;
+  
+        @media screen and (max-width: 1024px) {
+          height: auto;
+          font-size: 16px;
+        }
+      }
+      label span {
+        margin: 1.5vw;
+        height: auto;
+        font-size: 1.5vw;
+        display: block;
+        position: relative;
+        transform: translateY(2.3em);
+        transition: transform 0.4s ease-in;
+        z-index: -1;
+  
+        @media screen and (max-width: 1024px) {
+          height: auto;
+          font-size: 16px;
+        }
+      }
+      label:focus-within span {
+        transition: transform 0.4s ease-out;
+        transform: translateY(0em);
+      }
+    }
+}
+  
+//________________________________________________ form: textarea submit
+#contact-form-text-submit {
+    margin: 0;
+    position: relative; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-left: 2vw;
+    flex-shrink: 1;    
+  
+    @media screen and (max-width: 481px) {
+        flex-wrap: wrap; 
+      clear: both;
+      margin: auto;
+      width: 200px;
+      justify-content: space-around;
+    }
+  
+    #message-wrapper {
+      width: 35vw;
+      margin: 0;
+  
+      @media screen and (max-width: 481px) {
+        display: block;
+        width: 200px;
+        margin: 3px;
+      }
+  
+      textarea {
+        width: 35vw;
+        font-size: 1.5vw;
+        display: block;
+        position: relative;
+        z-index: 2;
+        color: $main-color-background;
+  
+        @media screen and (min-width: 1024px) {
+            height: auto;
+            padding: 10px;
+          }
+
+        @media screen and (max-width: 1024px) {
+          height: auto;
+          padding: 10px;
+          font-size: 16px;
+        }
+  
+        @media screen and (max-width: 481px) {
+          width: 178px;
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+   
+        label {
+        display: block;
+        margin: 1.5vw;
+        height: auto;
+        font-size: 1.5vw;
+        z-index: 2;
+        position: relative;
+  
+        @media screen and (max-width: 1024px) {
+          height: auto;
+          font-size: 16px;
+        }
+      }
+  
+        label span {
+          margin: 1.5vw;
+          margin-left: 0; 
+          height: auto;
+          font-size: 1.5vw;
+          display: block;
+          position: relative;
+          transform: translateY(2.2em);
+          transition: transform 0.4s ease-in;
+          z-index: -1;
+  
+          @media screen and (max-width: 1024px) {
+            height: auto;
+            font-size: 16px;
+            display: block;
+          }
+        }
+        label:focus-within span {
+          transition: transform 0.4s ease-out;
+          transform: translateY(0em);
+        }
+    }
+  
+    #wrapper-submit-contact{
+        width: 35vw;
+    }
+    
+    input {
+      margin: 0 2vw 1.5vw 4vw;
+      padding: 0.25vw;
+      font-size: 1.5vw;
+
+  
+      @media screen and (max-width: 1024px) {
+        height: auto;
+        font-size: 16px;
+        margin-right: 20px;
+      }
+  
+      @media screen and (max-width: 867px) {
+       margin-top: 20px;
+      }
+    }
+}
+
+///////////////////////ABOUT US//////////////////////////////
+
+#outer-wrapper-about-us{
+    margin-bottom: 70px; 
+    display: flex; 
+    @media screen and (max-width: 481px) {
+       height: max-content;
+      }
+}
+#wrapper-about-us{
+    height: max-content;
+}
+
+/////////////////////START POMODORO////////////////////////////////
+  // Button to start the pomodoro-timer
+  #wrapper-start-pomodoro{
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+    
+}
+.start-pomodoro-button{
+  //background-color: rgb(219, 223, 226, 0.8);
+  padding: 0;
+  //border-color: white;
+  margin: 1vw;
+  background-color: rgb(13, 19, 33, 0.9);
+  transform: scale(.9);
+  transition: transform .4s ease; 
+  font-size: 3.5vw;
+  a {
+    //background-color: rgb(219, 223, 226, 0.8);
+    padding: 0.8vw;
+    display: block; 
+    text-decoration: none;
+    transition: background-color, transform 1s ease;
+    color: $main-color-font;
+  }
+
+  a:hover{
+    //background-color: rgb(219, 223, 226);
+    background-color: $main-color-background;
+    transform: scale(1);
+  }
+  a:active{
+    transform: scale(1.1);
+  }
+}
+
+.start-pomodoro-button:hover {
+  transform:scale(1);
+}
+
+/////////////////////////////////TIMER////////////////////////////////
+#wrapper-started-pomodoro{
+    border: none;
+    text-align: center;
+    transform: translate(50%, -50%) scale(1);
+    transition: transform 10s linear;
+    position: absolute;
+    top: 50vh;
+    right: 50vw; 
+    margin: auto;
+}
+
+// paragraph for the time-showing and the break-sign
+  #time {
+    padding: 4vw;
+    font-size: 10vw;
+    text-shadow: 0 0 3px white, 0 0 10px $main-color-font;
+    border-radius: 50%;
+    background: radial-gradient($main-color-font, rgba(219, 223, 226, 0));
+    transform-origin: center; 
+    border: 2px solid white;
+    margin: auto; 
+    color: $main-color-background;
+    @media screen and (max-width: 481px){
+        display: inline-block;
+    }
+}
+  
+  @keyframes countdown {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-359deg);}  
+  }
+  #wrapper-started-pomodoro.scaledown{
+      transform: translate(50%, -50%) scale(0);
+  }
+  #time.spinn{
+    animation: countdown 500ms linear infinite;
+  }
+
+    //////////////////////FOOTER//////////////////////////////
+footer {
+    position: fixed;
+    bottom: 0%;
+    margin: 0;
+    width: 100%;
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    li {
+      display: block;
+      text-align: center;
+      box-sizing: border-box;
+      font-size: 1.5vw;
+      padding: 20px 0;
+      margin-bottom: 10px;
+      
+      @media screen and (max-width: 1265px){
+        font-size: 20px;
+        padding: 10px;
+      }
+        @media screen and (max-width: 481px){
+            padding: 10px 0;
+      }
+    }
+  
+    a {
+      position: relative; 
+      z-index: 3;
+      border: 1px solid white;
+      text-decoration: none;
+      color: $footer-color;
+      text-shadow: 0 0 2px $main-color-background;
+      background-color: rgba(13, 19, 33, .4);  
+      padding: 10px;
+      transform: scale(1);
+      transition: border 0.4s ease, transform 0.2s ease, box-shadow 0.8s ease, background-color .8s ease;
+      //transition: transform 0.2s ease;
+      //transition: box-shadow 0.8s ease;
+      //transition: background-color .8s ease; 
+      
+    }
+    a:hover {
+      border: 3px solid $hover-color;
+      text-decoration: none;
+      transform: scale(1.2);
+      box-shadow: 0 0 2px $footer-color;
+      background-color: $main-color-background;
+      color: $footer-color;
+    }
+}
