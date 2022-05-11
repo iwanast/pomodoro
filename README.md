@@ -1,4 +1,4 @@
-The POMoDORo is a kind of pomodoro and has different themes for a customer to choose from and the customer can on his own choose the duration of the focus-time. 
+The POMoDORo is a kind of pomodoro and has different themes for a customer to choose from. The customer can as well choose the duration of the focus-time. 
 
 It is the first project in the modul "the fundamentals" from HyperIsland which was a four weeks modul. 
 I used for the first time Sass and JavaScript next to HTML5. 
